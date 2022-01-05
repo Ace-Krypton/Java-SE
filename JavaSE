@@ -1,0 +1,99 @@
+~ Class -> In contect of Java - is a template to create objects and to define object data types and methods. Classes are categories and objects are items within each category. All class objects should have basic class properties.
+
+~ Object -> Object is a member (Also called an instance) of a class. Each object has an identity and a behaviour and a state. State of an object is stored in fields (variables), while methods (functions) display the object's behaviour. Objects are created at runtime from templates, which are also known as classes.
+
+~ Behaviour and State -> State: what objects have, for example Students have a first name, last name, age, etc. Behaviour: what objects do , Student attend a course "Java for beginners".
+
+~ Constructor -> A java constructor is a method called when an object is instantiated. In other word when you use "new" keyword, purpose of a Java constructor is to initialize the newly created object before it is used.
+
+~ Constructor chaining -> Constructor chaining is a process of calling one constructor from another constructor with respect to current object. There are two ways to do chaining: 1 -> Within same class: it can be done with using this() keyword. 2 -> From base class by using super() keyword.
+
+~ Access modifiers and Non-access modifiers -> Access modifiers are used to control the visibilty of a class  or a variable or a method or a constructor. Whereas non-access modifiers are used to provide other functionalities like synchronizing a method or block, restricting serialization of a variable etc. Access modifiers are: private, default or no modifier, protected, public. Non-Access modifiers: static, final, abstact, synchronized, transient, volatile, and strictfp.
+
+~ Static -> In Java programming language, the keyword static means that the particular member belongs to a type itself, rather than to an instance of that type. This means we will create only one instance of that static member that is shared across all instances of class and also static methods/attributes can be accessed without creating an object of a class.
+
+~ Member variables -> Class variables: also known as static variables are declared with the static keyword in a class, but outside a method, constructor or block. Instance variables: are created when an object is created with the use of the keyword "new" and destroyed when the object is destroyed.
+
+~ Instance method and static method -> Instance method are methods which require an object of its class to be created before it can be called. Static methods are the methods in Java that can be called without creating an object of class. Static method is declared with static keyword.
+
+~ Static block and instance block -> Static block executes when class is loaded in Java. Instance block executes only when instance of class is created, not called when class is loaded in java.
+
+~ Inheritance -> Inheritance in Java is a concept that acquires the properties from one class to other classes. For example, the relation between father and son. In java a class can inherit attributes and methods from another class, the class that inherits the properties is known as the  sub-class or the child class.
+
+~ The keyword "this" -> The "this" keyword refers to the current object in a method or constructor. The most common use of this keyword is to eliminate the confusion between class attributes and parametres with the same name (Because a class attribute is shadowed by a method or constructor parameter).
+
+~ Constructor of super class -> In Java, the superclass constructor can be called from the first line of subclass constructor by using the special keyword super() and passing appropriate parametres, for example super(); or super(theName); as in the code below.
+
+~ Calling methods of superclass -> Subclass methods can call superclass methods if both methods have the same name. From the subclass, reference the method name and superclass name with the @ symbol.
+
+~ hashCode() method -> the hashCode() method of Java Integer Class which determines the hash code for a given Integer. It overrides hashCode in class Object, by default this method returns a random integer that is unique for each instance.
+
+~ Default value of toString() method -> By default toString() method will return a string that lists the name of the class followed by an "@" sign and then hexadecimal representation of the memory location the instantiated object has been assigned to.
+
+~ Polymorphism -> Polymorphism in Java is the ability of an object to take many forms. To simply put, polymorphism in java allows us to perform the same action in many different ways.
+
+~ @Override -> Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+
+~ Method overloading -> Method overloading is a feature of Java in which a class has more than one method of the same name and their parameters are different.
+
+~ Method hiding -> In Method Hiding, you can hide the implementation of the methods of a base class from the derived class using the new keyword. Or in other words, in method hiding, you can redefine the method of the base class in the derived class by using the new keyword.
+
+~ Runtime error and compiler error -> A runtime error happens during running of the program. A compiler error happens when you try to compile the code. If you are unable to compile your code, that is a compiler error. If you compile and run your code, but then it fails during execution, that is runtime.
+
+~ String pool -> String pool is a storage area in Java Heap. To decrease the number of String objects created in JVM, the String class keeps a pool of strings. Each time a string literal is created, the JVM checks the string literal pool first.
+
+~ Background of String -> Strings in Java are Objects that are backed internally by char array. Since arrays are immutable(Cannot grow), Strings are immutable as well. Whenever a change to a String is made, an entirely new String is created. Whenever a String object is created as a literal, the object will be created in String constant pool.
+
+~ Integer.toString() -> int i=10; String s=Integer.toString(i); Now it will return "10".
+
+~ Convert a String to an Integer -> First way is to use "Integer.parseInt()" to convert String to an Integer. This method returns the string as a primitive type int. Second way is to use "Integer.valueOf()" to convert String to an Integer. This method returns String as a Integer object which is equivalent to a "new Integer(Integer.parseInt(s))".
+
+~ StringBuffer and StringBuilder -> StringBuffer is synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously. StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously.
+
+~ Encapsulation -> Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of bundling data and methods that work on that data within one unit, e.g., a class in Java. This concept is also often used to hide the internal representation, or state, of an object from the outside.
+
+~ Difference between Wrapper and Primitive type -> The key difference between wrapper class and primitive type in Java is that wrapper class is used to convert a primitive type to an object and object back to primitive type while a primitive type is a predefined data type provided by the Java programming language.
+
+~ Difference between POJO and Bean -> A POJO should not: Extend prespecified classes, Ex: public class GFG extends javax.servlet.http.HttpServlet { … } is not a POJO class. Implement prespecified interfaces, Ex: public class Bar implements javax.ejb.EntityBean { … } is not a POJO class.Contain prespecified annotations, Ex: @javax.persistence. Entity public class Baz { … } is not a POJO class. Beans: All JavaBeans are POJOs but not all POJOs are JavaBeans. Serializable i.e. they should implement Serializable interface. Still, some POJOs who don’t implement a Serializable interface are called POJOs because Serializable is a marker interface and therefore not of many burdens. Fields should be private. This is to provide complete control on fields. Fields should have getters or setters or both. A no-arg constructor should be there in a bean. Fields are accessed only by constructor or getter setters.
+
+~ Difference between ASCII and Unicode -> ASCII: 7 bits per character and has 128 different characters, Unicode is 16, 24 or 32 bits per character and has 65536 to 4294967296 characters depending on system ASCII.
+
+~ Break, Continue, and Return -> The break statement results in the termination of the loop, it will come out of the loop and stops further iterations. The continue statement stops the current execution of the iteration and proceeds to the next iteration. And return statement causes the program control to transfer back to the caller of a method. A return type may be a primitive type like int, float, double, a reference type or void type(returns nothing).
+
+~ Abstract class -> An abstract class allows you to create functionality that subclasses can implement or override. It may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+
+~ Why we cannot call abstract method -> You can't create a object of abstract class because there is an abstract method which has nothing so you can call that abstract method too. If we will create an object of the abstract class and calls the method having no body(as the method is pure virtual) it will give an error.
+
+~ Anonymous class -> Anonymous classes enable you to make your code more concise. They enable you to declare and instantiate a class at the same time. They are like local classes except that they do not have a name. Use them if you need to use a local class only once.
+
+~ Difference between Concrete and Abstract class -> An abstract class cannot be directly instantiated using the new keyword. A concrete class can be directly instantiated using the new keyword. An abstract class may or may not contain abstract methods. A concrete class cannot contain an abstract method.
+
+~ Difference between Error and Exception -> Error occur only when system resources are deficient whereas, an exception is caused if a code has some problem. An error can never be recovered whereas, an exception can be recovered by preparing the code to handle the exception. Both extends from Throwable class.
+
+~ Checked and Unchecked exception -> A checked exception must be handled either by re-throwing or with a try catch block, a runtime isn't required to be handled. An unchecked exception is a programming error and are fatal, whereas a checked exception is an exception condition within your codes logic and can be recovered or retried from.
+
+~ StackTrace -> In simple terms, a stack trace is a list of the method calls that the application was in the middle of when an Exception was thrown.
+
+~ getLocalizedMessage() method -> The getLocalizedMessage() method of Throwable class is used to get a locale-specific description of the Throwable object when an Exception Occurred. It helps us to modify the description of the Throwable object according to the local Specific message. For the subclasses which do not override this method, the default implementation of this method returns the same result as getMessage().
+
+~ Throw keyword -> The throws keyword in Java is used to declare exceptions that can occur during the execution of a program. For any method that can throw exceptions, it is mandatory to use the throws keyword to list the exceptions that can be thrown. ... Unchecked exceptions don't need to be thrown or handled explicitly in code.
+
+~ How to create your own excpetion in Java -> 
+public class StudentStoreException extends Exception {
+ 
+    public StudentStoreException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
+
+public void save(Student student) throws StudentStoreException {
+    try {
+        // execute SQL statements..
+    } catch (SQLException ex) {
+        throw new StudentStoreException("Failed to save student", ex);
+    }
+}
+
+~ String "equals()" method vs Object "equals()" -> The equals() method of the String class is not same as the equals() method of the Object class. It is overridden, this method accepts a String value and compares it with the current object and returns true only if the character sequences in the both String objects are exactly same.
+
+~ Marker interface -> A marker interface is an interface that has no methods or constants inside it. It provides run-time type information about objects, so the compiler and JVM have additional information about the object. A marker interface is also called a tagging interface.
